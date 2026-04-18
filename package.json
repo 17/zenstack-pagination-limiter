@@ -1,0 +1,31 @@
+{
+  "name": "zenstack-pagination-limiter",
+  "version": "0.1.0",
+  "description": "Automatically adds a default Take, enforces a maximum Take, and caps Skip for queries to prevent unsafe pagination",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/17/zenstack-pagination-limiter.git"
+  },
+  "keywords": [
+    "zenstack",
+    "pagination",
+    "limiter"
+  ],
+  "license": "MIT",
+  "author": "17",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.4"
+  },
+  "dependencies": {
+    "@zenstackhq/orm": "^3.5.0",
+    "kysely": "^0.28.0"
+  }
+}
