@@ -54,7 +54,7 @@ export class PaginationLimiterTransformer extends OperationNodeTransformer {
   }
 }
 
-export default function <Schema extends SchemaDef> (options: PaginationLimiterOptions) {
+export default (options?: any) => {
   return definePlugin({
     id: 'pagination-limiter',
     name: 'Pagination Limiter Plugin',
