@@ -54,7 +54,7 @@ export class PaginationLimiterTransformer extends OperationNodeTransformer {
   }
 }
 
-export default (options?: any): AnyPlugin => {
+export default (options?: PaginationLimiterOptions): AnyPlugin => {
   return definePlugin({
     id: 'pagination-limiter',
     name: 'Pagination Limiter Plugin',
