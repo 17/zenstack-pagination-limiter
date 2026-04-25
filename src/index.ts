@@ -3,6 +3,7 @@ import {
   SelectQueryNode
  } from 'kysely'
 import { definePlugin } from '@zenstackhq/orm'
+import type { SchemaDef } from '@zenstackhq/orm/schema'
 
 export type PaginationLimiterOptions = {
   defaultTake?: number,
@@ -53,7 +54,7 @@ export class PaginationLimiterTransformer extends OperationNodeTransformer {
   }
 }
 
-export default (options: PaginationLimiterOptions) => {
+export default function <Schema extends SchemaDef> (options: PaginationLimiterOptions) {
   return definePlugin({
     id: 'pagination-limiter',
     name: 'Pagination Limiter Plugin',
