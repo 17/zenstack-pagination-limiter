@@ -2,7 +2,7 @@ import {
   OperationNodeTransformer, LimitNode, OffsetNode, ValueNode,
   SelectQueryNode
  } from 'kysely'
-import { definePlugin } from '@zenstackhq/orm'
+import { definePlugin, type AnyPlugin } from '@zenstackhq/orm'
 import type { SchemaDef } from '@zenstackhq/orm/schema'
 
 export type PaginationLimiterOptions = {
@@ -54,7 +54,7 @@ export class PaginationLimiterTransformer extends OperationNodeTransformer {
   }
 }
 
-export default (options?: any) => {
+export default (options?: any): AnyPlugin => {
   return definePlugin({
     id: 'pagination-limiter',
     name: 'Pagination Limiter Plugin',
